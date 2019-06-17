@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'Recruitment'
+	- var bodyClass = 'recruitment-page'
+
+block main
+	include ../components/banner/trangrieng.pug
+	include ../components/_global/breadcrumb.pug
+	include ../components/recruitment/index.pug
+	include ../components/_global/pagination.pug

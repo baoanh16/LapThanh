@@ -1,0 +1,203 @@
+.home
+	.news-detail
+		background: #e7edf1
+		padding-top: 60px
+		padding-bottom: 50px
+		.other-news, .for-investor
+			h2
+				font-size: 30px
+				color: rgb(52, 52, 52)
+				background: none
+				font-weight: 500
+				padding-left: 0
+				padding-bottom: 20px
+				border-bottom: 1px solid rgb(213, 213, 213)
+				@media (max-width: 991.98px)
+					font-size: 26px
+				@media (max-width: 767.98px)
+					font-size: 24px
+				@media (max-width: 575.98px)
+					font-size: 22px
+				&:after
+					font-size: 49px
+					content: "\f142"
+					font-family: "Material Design Icons"
+					font-weight: 400
+					display: flex
+					align-items: center
+					color: rgb(197, 197, 197)
+			.news-item
+				figure
+					figcapton
+						h3
+							a
+								color: rgb(52, 52, 52)
+		.col-md-6
+			&:nth-child(2)
+				.other-news
+					@media (max-width: 767.98px)
+						h2
+							padding-top: 60px
+	.projects
+		.main-projects
+			.view-more
+				width: 100%
+				text-align: center
+				a
+					font-size: 14px
+					color: #115372
+					padding: 6px 40px
+					text-transform: uppercase
+					margin-top: 30px
+					display: inline-block
+					box-sizing: border-box
+					border: 2px solid transparent
+					border-image: linear-gradient(90deg, rgba(17,83,114,1) 0%, rgba(14,167,185,1) 50%)
+					border-image-slice: 1
+
+.home-partner
+	@media (max-width: 576px)
+		padding-bottom: 80px
+	.swiper-slide
+		a.item
+			display: flex
+			align-items: center
+			justify-content: center
+			background-color: #fff
+			border: 2px solid #e1e1e1
+			padding: 15px
+			box-shadow: 0 0 0 0 rgba(0,0,0,0)
+			transition: .25s cubic-bezier(.4,0,.2,1)
+			height: 100px
+			img
+				height: 70px
+			&:hover
+				border-color: #115372
+				box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+	.swiper-container
+		position: static
+
+	.partner-slider
+		position: relative
+
+	.btn-next, .btn-prev
+		width: 30px
+		height: 30px
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: #ffffff
+		cursor: pointer
+		position: absolute
+		top: 50%
+		outline: none
+		transform: translateY(-50%)
+		transition: .25s cubic-bezier(.4,0,.2,1)
+		em
+			font-size: 28px 
+			color: #c5c5c5
+			transition: .25s cubic-bezier(.4,0,.2,1)
+		&.swiper-button-disabled
+			opacity: 0.5
+		&:hover
+			background-color: #115372
+			em
+				color: #ffffff
+	.btn-prev
+		left: -30px
+	.btn-next
+		right: -30px
+	@media (max-width: 576px)
+		.btn-prev
+			left: 45%
+			top: auto
+			bottom: -50%
+			z-index: 99
+			transform: translateX(-50%)
+			border: 2px solid #e1e1e1
+			&:hover
+				border-color: #115372
+		.btn-next
+			right: 45%
+			top: auto
+			bottom: -50%
+			z-index: 99
+			transform: translateX(50%)
+			border: 2px solid #e1e1e1
+			&:hover
+				border-color: #115372
+.home-2
+	position: relative
+	background-image: url('./img/home/bg-factory.jpg')
+	margin-top: 30px
+	@media (min-width: 992px)
+		margin-top: 0
+	.container-fluid
+		.col-lg-6
+			&:nth-child(1)
+				padding: 0
+			&:nth-child(2)
+				@media (max-width: 991.98px)
+					display: none
+	.container
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		@media (max-width: 991.98px)
+			position: static
+			transform: translateX(0%)
+		.col-lg-6
+			&:nth-child(1)
+				height: 600px
+				@media (max-width: 991.98px)
+					display: none
+			&:nth-child(2)
+				display: flex
+				align-items: center
+	.BriefContent
+		margin-left: 50px
+		@media (max-width: 991.98px)
+			width: 100%
+			margin-left: 0
+			padding-top: 30px
+			padding-bottom: 30px
+		h2
+			font-size: 45px
+			color: rgb(52, 52, 52)
+			text-transform: uppercase
+			font-weight: 500
+			line-height: 1.222
+			margin-bottom: 30px
+			@media (max-width: 991.98px)
+				font-size: 40px
+			@media (max-width: 767.98px)
+				font-size: 35px
+		p
+			font-size: 15px
+			color: rgb(52, 52, 52)
+			@media (max-width: 991.98px)
+				text-align: justify
+		.view-more
+			text-align: center
+			@media (min-width: 992px)
+				text-align: left
+			a
+				font-size: 14px
+				color: #115372
+				padding: 6px 40px
+				text-transform: uppercase
+				margin-top: 30px
+				display: inline-block
+				box-sizing: border-box
+				border: 2px solid transparent
+				border-image: linear-gradient(90deg, rgba(17,83,114,1) 0%, rgba(14,167,185,1) 50%)
+				border-image-slice: 1
+	.boximg
+		img
+			height: 300px
+			width: 100%
+			@media (min-width: 768px)
+				height: 450px
+			@media (min-width: 992px)
+				height: 600px

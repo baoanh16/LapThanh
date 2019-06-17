@@ -1,0 +1,141 @@
+.news
+	h3
+		a
+			color: #000
+	.news-tab
+		margin-bottom: 35px
+		&:nth-child(1)
+			padding-left: 15px
+		a
+			font-size: 18px
+			color: #000000
+			font-weight: 600
+			margin-right: 20px
+			text-decoration: none
+			@media (max-width: 575.98px)
+				font-size: 14px
+			&:hover
+				color: rgb(17, 83, 114)
+				position: relative
+				&:before
+					content: ""
+					position: absolute
+					bottom: -10px
+					height: 2px
+					width: 100%
+					background: rgb(17, 83, 114)
+			&.active
+				color: rgb(17, 83, 114)
+				position: relative
+				&:before
+					content: ""
+					position: absolute
+					bottom: -10px
+					height: 2px
+					width: 100%
+					background: rgb(17, 83, 114)
+	.first-article
+		margin-bottom: 30px
+		.boximg
+			overflow: hidden
+			&:hover
+				overflow: hidden
+				img
+					transform: scale(1.2)
+					transition: .5s all ease-in-out
+			img
+				height: 300px
+				width: 100%
+				transition: .5s all ease-in-out
+				@media (max-width: 991.98px)
+					height: 200px
+		figcaption
+			h3
+				margin-bottom: 15px
+				font-size: 24px
+				color: #000000
+				font-weight: bold
+				line-height: 1.5
+				overflow: hidden
+				display: -webkit-box
+				text-overflow: ellipsis
+				-webkit-line-clamp: 2
+				-webkit-box-orient: vertical
+			p
+				font-size: 15px
+				color: rgb(52, 52, 52)
+				font-weight: 500
+				overflow: hidden
+				display: -webkit-box
+				text-overflow: ellipsis
+				-webkit-line-clamp: 5
+				-webkit-box-orient: vertical
+			date
+				font-size: 13px
+				color: rgb(153, 153, 153)
+			@media (max-width: 991.98px)
+				h3
+					font-size: 20px
+				p
+					font-size: 13px
+				date
+					font-size: 12px
+			@media (max-width: 767.98px)
+				p
+					text-align: justify
+			@media (max-width: 767.98px)
+				h3
+					margin-top: 20px
+	.other-articles
+		.news-item
+			figure
+				display: -webkit-box
+				display: flex
+				flex-wrap: wrap
+				margin-right: -15px
+				margin-left: -15px
+				padding-right: 15px
+				padding-left: 15px
+				margin-bottom: 30px
+				&:hover
+					.boximg
+						overflow: hidden
+						img
+							transform: scale(1.2)
+							transition: .5s all ease-in-out
+				.boximg
+					flex: 0 0 30%
+					max-width: 30%
+					overflow: hidden
+					
+					img
+						width: 100%
+						height: 90px
+						transition: .5s all ease-in-out
+				figcaption
+					flex: 0 0 70%
+					max-width: 70%
+					padding-left: 20px
+					width: 100%
+					h3
+						font-size: 15px
+						color: rgb(52, 52, 52)
+						font-weight: bold
+						overflow: hidden
+						display: -webkit-box
+						text-overflow: ellipsis
+						-webkit-line-clamp: 3
+						-webkit-box-orient: vertical
+						a
+							color: rgb(52, 52, 52)
+					date
+						font-size: 13px
+						color: rgb(153, 153, 153)
+					@media (max-width: 991.98px)
+						h3
+							font-size: 12px
+						date
+							font-size: 11px
+					@media (max-width: 767.98px)
+						h3
+							text-align: justify

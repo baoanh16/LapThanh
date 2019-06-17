@@ -1,0 +1,71 @@
+.partner
+	@media (max-width: 576px)
+		padding-bottom: 80px
+	.swiper-slide
+		a.item
+			display: flex
+			align-items: center
+			justify-content: center
+			background-color: #fff
+			border: 2px solid #e1e1e1
+			padding: 15px
+			box-shadow: 0 0 0 0 rgba(0,0,0,0)
+			transition: .25s cubic-bezier(.4,0,.2,1)
+			height: 100px
+			img
+				height: 70px
+			&:hover
+				border-color: #115372
+				box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+	.swiper-container
+		position: static
+
+	.partner-slider
+		position: relative
+
+	.btn-next, .btn-prev
+		width: 30px
+		height: 30px
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: #ffffff
+		cursor: pointer
+		position: absolute
+		top: 50%
+		outline: none
+		transform: translateY(-50%)
+		transition: .25s cubic-bezier(.4,0,.2,1)
+		em
+			font-size: 28px 
+			color: #c5c5c5
+			transition: .25s cubic-bezier(.4,0,.2,1)
+		&.swiper-button-disabled
+			opacity: 0.5
+		&:hover
+			background-color: #115372
+			em
+				color: #ffffff
+	.btn-prev
+		left: -30px
+	.btn-next
+		right: -30px
+	@media (max-width: 576px)
+		.btn-prev
+			left: 45%
+			top: auto
+			bottom: -15%
+			z-index: 99
+			transform: translateX(-50%)
+			border: 2px solid #e1e1e1
+			&:hover
+				border-color: #115372
+		.btn-next
+			right: 45%
+			top: auto
+			bottom: -15%
+			z-index: 99
+			transform: translateX(50%)
+			border: 2px solid #e1e1e1
+			&:hover
+				border-color: #115372

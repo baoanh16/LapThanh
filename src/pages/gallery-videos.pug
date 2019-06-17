@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'Gallery'
+	- var bodyClass = 'gallery-page'
+
+block main
+	include ../components/banner/trangrieng.pug
+	include ../components/_global/breadcrumb.pug
+	include ../components/gallery/videos/index.pug
+	include ../components/_global/pagination.pug

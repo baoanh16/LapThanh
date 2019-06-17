@@ -1,0 +1,284 @@
+.footer-nav
+	padding: 30px 0
+	@media (min-width: 992px)
+		padding: 50px 0
+
+	.logo-footer
+		margin-bottom: 20px
+		img
+			height: 56px
+			margin-top: 5px
+			width: 90%
+			@media (max-width: 991.98px)
+				width: inherit
+
+	h2
+		font-size: 16px
+		font-weight: 700
+		color: #fff
+		margin-bottom: 15px
+		text-transform: uppercase
+
+	.contact-info
+		a
+			display: flex
+			align-items: flex-start
+			text-decoration: none
+			text-decoration-color: rgba(0,0,0,0)
+			margin-bottom: 8px
+			transition: .25s cubic-bezier(.4,0,.2,1)
+			&:last-child
+				margin-bottom: 0
+			&:hover
+				text-decoration-color: #c0ced4
+		em
+			font-size: 14px
+			color: #0ea7b9
+			flex: 0 0 24px
+		span
+			font-size: 14px
+			font-weight: 400
+			color: #c0ced4
+
+	.social-links
+		margin-top: 20px
+		display: flex
+		align-items: center
+		a
+			display: flex
+			align-items: center
+			justify-content: center
+			text-decoration: none
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			border: 1px solid #20779e
+			margin-right: 10px
+			transition: .25s cubic-bezier(.4,0,.2,1)
+			&:last-child
+				margin-right: 0
+			em
+				font-size: 18px
+				color: #0ea7b9
+				transition: .25s cubic-bezier(.4,0,.2,1)
+			&:hover
+				background-color: #fff
+				border-color: #fff
+				em
+					color: #115372
+
+	nav
+		a
+			display: block
+			font-size: 14px
+			font-weight: 400
+			color: #c0ced4
+			line-height: 30px
+			padding-left: 20px
+			position: relative
+			text-decoration: none
+			text-decoration-color: rgba(0,0,0,0)
+			transition: .25s cubic-bezier(.4,0,.2,1)
+			&:before
+				position: absolute
+				content: ''
+				width: 10px
+				height: 1px
+				background-color: #c0ced4
+				top: 50%
+				left: 0
+				transform: translateY(-50%)
+			&:hover
+				text-decoration-color: #c0ced4
+				text-decoration: underline
+
+	p
+		font-size: 14px
+		font-weight: 400
+		color: #c0ced4
+		line-height: 20px
+
+	.subscribe
+		margin-top: 20px
+		.subscribefrm
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			position: relative
+			flex-wrap: wrap
+
+			.subscribeemail
+				flex: calc(100% - 50px)
+				width: calc(100% - 50px)
+				height: 40px
+				padding: 0 17px
+				background-color: #19829d
+				border: 0
+				outline: none
+				box-shadow: none
+				font-size: 14px
+				font-weight: 400
+				color: #fff
+				&::placeholder
+					color: #10627f
+					font-size: 14px
+					font-style: italic
+
+			.subscribebutton
+				width: 50px
+				height: 40px
+				display: flex
+				align-items: center
+				justify-content: center
+				flex: 0 0 50px
+				background-color: #0ea7b9
+				border: 0
+				outline: none
+				box-shadow: none
+				font-size: 0
+				position: relative
+				&:before
+					font-family: "Material Design Icons"
+					content: '\f054'                
+					font-size: 24px
+					color: #ffffff
+
+			> span
+				font-size: 14px
+				line-height: 20px
+				color: #c0ced4
+				font-style: italic
+				flex: 0 0 100%
+				margin-top: 8px
+
+	.quick-links
+		@media (max-width: 992px)
+			margin: 30px 0
+
+.footer-info
+	height: 60px
+	background-color: #094663
+	@media (max-width: 992px)
+		height: 90px
+	p
+		text-align: center
+		text-transform: uppercase
+		color: #ffffff
+		font-size: 13px
+		font-weight: 400
+		a
+			text-decoration: none
+			color: #ffffff
+			font-size: 13px
+			font-weight: 400
+	.container
+		height: 100%
+		.Module
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 100%
+.footer-contact
+	background: #f2f2f2
+	.col-md-4
+		&:nth-child(1)
+			border-left: 1px solid rgb(225, 225, 225)
+			border-right: 1px solid rgb(225, 225, 225)
+		&:nth-child(2), &:nth-child(3)
+			border-right: 1px solid rgb(225, 225, 225)
+		@media (max-width: 767.98px)
+			&:nth-child(1)
+				border: none
+				border-bottom: 1px solid rgb(225, 225, 225)
+			&:nth-child(2)
+				border: none
+				border-bottom: 1px solid rgb(225, 225, 225)
+			&:nth-child(3)
+				border: none
+		.ModuleContent
+				display: flex
+				align-items: center
+		.contact
+			padding: 25px 0
+			display: flex
+			align-items: center
+			height: 100%
+			a
+				display: inline-block
+				margin-left: 15px
+				display: flex
+				justify-content: center
+				align-items: center
+				color: #ffffff
+				font-size: 20px
+				height: 40px
+				width: 40px
+				border-radius: 50%
+				background-image: linear-gradient( 0deg, rgb(0,149,218) 0%, rgb(17,83,114) 100%)
+			p
+				padding-left: 20px
+				display: inline-block
+				margin: 0
+				a
+					display: flex
+					border: none
+					background: none
+					flex-direction: column
+					width: 100%
+					&:before
+						display: none
+					span
+						display: block
+						&:nth-child(1)
+							font-size: 15px
+							color: rgb(153, 153, 153)
+							font-weight: bold
+							text-transform: uppercase
+						&:nth-child(2)
+							font-size: 18px
+							color: rgb(51, 51, 51)
+							font-weight: 500
+			@media (max-width: 991.98px)
+				a
+					height: 35px
+					width: 35px
+				p
+					span
+						&:nth-child(1)
+							font-size: 13px
+						&:nth-child(2)
+							font-size: 15px
+		&:nth-child(1)
+			.contact
+				a
+					&:before
+						content: "\f3f2"
+						font-family: "Material Design Icons"
+						font-weight: 400
+					p
+						a
+							&:before
+								display: none
+		&:nth-child(2)
+			.contact
+				a
+					&:before
+						content: "\f1ee"
+						font-family: "Material Design Icons"
+						font-weight: 400
+					p
+						a
+							&:before
+								display: none
+		&:nth-child(3)
+			.contact
+				a
+					&:before
+						content: "\f1da"
+						font-family: "Material Design Icons"
+						font-weight: 400
+					p
+						a
+							&:before
+								display: none

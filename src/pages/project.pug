@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'Project'
+	- var bodyClass = 'project-page'
+
+block main
+	include ../components/banner/trangrieng.pug
+	include ../components/_global/breadcrumb.pug
+	include ../components/project/index.pug

@@ -1,0 +1,41 @@
+.breadcrumb-wrapper
+	background-color: #e7edf1
+	height: 40px
+	.breadcrumb
+		height: 40px
+		list-style: none
+		display: flex
+		align-items: center
+
+	li
+		a
+			text-decoration: none
+			display: flex
+			align-items: center
+			position: relative
+			span
+				font-size: 14px
+				font-weight: 400
+				color: #999999
+			&:after
+				display: inline-block
+				content: '\f142'
+				font-family: "Material Design Icons"
+				font-size: 24px
+				color: #999999
+				margin: 0 4px
+		&:first-child
+			a
+				span
+					display: flex
+					font-size: 0
+					width: 20px
+					&:before
+						content: "\f2dc"
+						font-family: "Material Design Icons"
+						font-size: 20px
+
+		&:last-child
+			a
+				&:after
+					display: none

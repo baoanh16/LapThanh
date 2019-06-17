@@ -1,0 +1,17 @@
+.partner.lapthanh-section
+	.container
+		h1.main-title Investors &amp; partner
+		.partner-slider
+			.swiper-container
+				- var n = 0
+				.swiper-wrapper
+					while n < 24
+						.swiper-slide
+							a(href="javascript:void(0)" target="_blank").item
+								img(data-src='./img/partner/10.png', alt='').lazyload.blur-up
+						- n++
+				.swiper-buttons
+					.btn-prev
+						em.mdi.mdi-chevron-left
+					.btn-next
+						em.mdi.mdi-chevron-right

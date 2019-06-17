@@ -1,0 +1,161 @@
+.projects
+	.project
+		display: block
+		text-decoration: none
+		position: relative
+		img
+			width: 100%
+			height: auto
+
+		.img
+			position: relative
+			&:before
+				position: absolute
+				content: ''
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				background: linear-gradient(to top, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 80%, rgba(0,0,0,0) 100%)
+				z-index: 1
+
+		
+		p
+			font-size: 14px
+			font-weight: 400
+			color: #ffffff
+			text-align: center
+			margin-bottom: 2px
+		h2
+			font-size: 20px
+			font-weight: 700
+			color: #ffffff
+			text-align: center
+			text-transform: uppercase
+
+		em
+			font-size: 24px
+			color: #ffffff
+			margin-top: 15px
+
+		.content
+			width: 100%
+			padding: 15px
+			background: linear-gradient( 30deg , rgb(17,83,114) 0%, rgb(14,167,185) 100%)
+			em
+				display: none
+			@media (min-width: 992px)
+				padding: 20px
+				position: absolute
+				bottom: 0
+				left: 0px
+				z-index: 2
+				background: rgba(0,0,0,0)
+				opacity: 1
+				transition: .25s cubic-bezier(.4,0,.2,1)
+		@media (max-width: 991.98px)
+			.content
+				padding: 10px
+			h2
+				font-size: 18px
+		@media (max-width: 767.98px)
+			.content
+				padding: 5px
+			h2
+				font-size: 14px
+		@media (max-width: 575.98px)
+			.content
+				padding: 0px
+			h2
+				font-size: 12px
+			p
+				font-size: 12px
+				margin: 0
+
+
+
+		.cover
+			@media (max-width: 992px)
+				display: none
+			@media (min-width: 992px)
+				display: flex
+				align-items: center
+				justify-content: center
+				flex-direction: column
+				width: 100%
+				height: 100%
+				padding: 15px
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 3
+				background: linear-gradient(to right, rgba(17,83,114, .9) 0%, rgba(14,167,185, .9) 100%)
+				opacity: 0
+				transition: .25s cubic-bezier(.4,0,.2,1)
+
+		@media (min-width: 992px)
+			&:hover
+				.cover
+					opacity: 1
+				.content
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					z-index: 5
+					display: flex
+					justify-content: center
+					align-items: center
+					flex-direction: column
+					em
+						display: block
+	.main-projects
+		.col-lg-8
+			margin-bottom: 30px
+			.project
+				img
+					height: 430px
+					@media (max-width: 991.98px)
+						height: 300px
+			@media (min-width: 992px)
+				margin-bottom: 0
+				.project
+					.content
+						padding: 30px
+		.col-lg-4
+			.project
+				margin-bottom: 30px
+				img
+					height: 200px
+					@media (max-width: 991.98px)
+						height: 300px
+					&:last-child
+						margin-bottom: 0
+		.view-more
+			width: 100%
+			text-align: center
+			a
+				font-size: 14px
+				color: #115372
+				padding: 6px 40px
+				text-transform: uppercase
+				margin-top: 30px
+				display: inline-block
+				box-sizing: border-box
+				border: 2px solid transparent
+				border-image: linear-gradient(90deg, rgba(17,83,114,1) 0%, rgba(14,167,185,1) 50%)
+				border-image-slice: 1
+	.normal-projects
+		.col-md-6.col-lg-4
+			margin-top: 30px
+			.project
+				img
+					height: 195px
+			&:first-child
+				margin-top: 0
+			@media (min-width: 768px)
+				&:nth-child(2)
+					margin-top: 0
+			@media (min-width: 992px)
+				&:nth-child(3)
+					margin-top: 0

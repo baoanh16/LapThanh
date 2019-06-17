@@ -4,49 +4,41 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="recruitment lapthanh-section">
-			<div class="container">
-				<h1 class="main-title">
-					<xsl:value-of select="/NewsList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
-				</h1>
-				<div class="row">
+		<h1 class="main-title">
+			<xsl:value-of select="/NewsList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
+		</h1>
+		<div class="row">
+			<div class="col-12">
+				<div style="display: flex; flex-wrap: wrap">
 					<div class="searchbox">
 						<div class="formgroup">
-							<input type="text"></input>
+							<input id="txtKeyword" type="text" placeholder="Keyword "></input>
 						</div>
 					</div>
 					<div class="searchbox">
-						<select>Work place
-							<option>a</option>
-							<option>a</option>
-							<option>a</option>
-						</select>
+						<input id="txtPlace" type="text" placeholder="Work place "></input>
 					</div>
-					<div class="searchbox">
-						<select>Career
-							<option>a</option>
-							<option>a</option>
-							<option>a</option>
-						</select>
-					</div><a class="btn-submit" href="">search</a>
+					<a id="btnSearchJob" class="btn-submit" href="#">search</a>
 				</div>
-				<div class="row">
-					<div class="table-main">
-						<table>
-							<thead>
-								<tr>
-									<th>position</th>
-									<th>quantity</th>
-									<th>area</th>
-									<th>start day</th>
-									<th>expiry day</th>
-								</tr>
-							</thead>
-							<tbody>
-								<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
-							</tbody>
-						</table>
-					</div>
+			</div>
+		</div>
+		<div class="row ajaxresponse">
+			<div class="col-12">
+				<div class="table-main">
+					<table>
+						<thead>
+							<tr>
+								<th>position</th>
+								<th>quantity</th>
+								<th>area</th>
+								<th>start day</th>
+								<th>expiry day</th>
+							</tr>
+						</thead>
+						<tbody class="listJob">
+							<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
@@ -73,8 +65,12 @@
 			<td>
 				<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 			</td>
-			<td><xsl:value-of select="StartDate" disable-output-escaping="yes"></xsl:value-of></td>
-			<td><xsl:value-of select="EndDate" disable-output-escaping="yes"></xsl:value-of></td>
+			<td>
+				<xsl:value-of select="StartDate" disable-output-escaping="yes"></xsl:value-of>
+			</td>
+			<td>
+				<xsl:value-of select="EndDate" disable-output-escaping="yes"></xsl:value-of>
+			</td>
 		</tr>
 	</xsl:template>
 </xsl:stylesheet>

@@ -4,13 +4,13 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="recruitment-detail lapthanh-section">
-			<div class="container">
+		<div class="recruitment-detail">
 				<div class="row">
 					<div class="col-md-8">
 						<div class="job-info">
 							<h2>
 								<xsl:value-of select="/NewsDetail/Title" disable-output-escaping="yes"></xsl:value-of>
+								<xsl:value-of select="/NewsDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
 							</h2>
 							<date><xsl:value-of select="/NewsDetail/CreatedDate" disable-output-escaping="yes"></xsl:value-of></date>
 						</div>
@@ -45,7 +45,6 @@
 									<xsl:attribute name="src">
 										<xsl:value-of select="/NewsDetail/ApplyUrl" disable-output-escaping="yes"></xsl:value-of>
 									</xsl:attribute>
-									<xsl:value-of select="/NewsDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
 								</iframe>
 							</div>
 					</div>
@@ -56,7 +55,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
 		</div>
 	</xsl:template>
 	<xsl:template match="NewsOther">

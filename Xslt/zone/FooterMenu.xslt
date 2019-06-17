@@ -10,6 +10,12 @@
 
   <xsl:template match="Zone">
 	<a>
+	<xsl:if test="IsActive='true'">
+		<xsl:attribute name="class">
+			<xsl:text>active</xsl:text>
+		</xsl:attribute>
+	</xsl:if>
+	
 		<xsl:attribute name="href">
 			<xsl:value-of select="Url"></xsl:value-of>
 		</xsl:attribute>

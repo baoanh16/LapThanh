@@ -18,6 +18,10 @@ $(document).ready(function () {
 
 	clearBox();
 
+	showRefreshBtn();
+
+	refreshPage();
+
 	$('.apply-now').on('click', function () {
 		$('.form-apply').slideToggle();
 	});
@@ -190,5 +194,15 @@ function clearBox() {
 	$('.contact .wrap-form div .RadCaptcha .rcRefreshImage').empty();
 	$('.contact .wrap-form div .RadCaptcha .rcRefreshImage').on('click', function () {
 		$(this).empty();
+	})
+}
+function showRefreshBtn() {
+	$('footer .footer-nav #ctl00_mdl155_ctl00_subscribe1_UpdatePanel1').on('DOMSubtreeModified', function () {
+		$(this).parents('.footer-nav').find('.subscribe-reload .mdi-reload').css('display', 'block')
+	})
+}
+function refreshPage() {
+	$('footer .footer-nav .subscribe-reload .mdi-reload').on('click', function () {
+		window.location.reload()
 	})
 }

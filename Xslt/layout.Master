@@ -20,7 +20,8 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="/Data/Sites/1/skins/default/favicon/apple-icon-144x144.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="/Data/Sites/1/skins/default/favicon/apple-icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="/Data/Sites/1/skins/default/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="/Data/Sites/1/skins/default/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="192x192"
+		href="/Data/Sites/1/skins/default/favicon/android-icon-192x192.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/Data/Sites/1/skins/default/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="/Data/Sites/1/skins/default/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/Data/Sites/1/skins/default/favicon/favicon-16x16.png">
@@ -45,61 +46,63 @@
 	<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css?family=Encode+Sans:300,400,500,600,700&amp;amp;subset=vietnamese">
-		<style>
-			.fancybox-type-iframe {
-				min-height: 560px;
-				z-index: 9999;
-				background: #fff;
-				box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-				border-radius: 3px
-			}
-	
-			.fancybox-inner,
-			.fancybox-outer,
-			.fancybox-type-iframe .fancybox-skin {
-				min-height: 560px
-			}
-	
-			.fancybox-type-iframe iframe {
-				width: 100%;
-				min-height: 560px
-			}
+	<style>
+		.fancybox-type-iframe {
+			min-height: 560px;
+			z-index: 9999;
+			background: #fff;
+			box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+			border-radius: 3px
+		}
+
+		.fancybox-inner,
+		.fancybox-outer,
+		.fancybox-type-iframe .fancybox-skin {
+			min-height: 560px
+		}
+
+		.fancybox-type-iframe iframe {
+			width: 100%;
+			min-height: 560px
+		}
+
+		.cmsadminpanel .canhcamcmslistmenu {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center
+		}
+
+		.cmsadminpanel .canhcamcmslistmenu li {
+			list-style-type: none
+		}
+
+		.cmsadminpanel .canhcamcmslistmenu li .form-inline .form-group:first-child {
+			display: none;
+		}
+
+		.cmsadminpanel .canhcamcmslistmenu li a {
+			border: 0;
+			text-decoration: none
+		}
+
+		.cmsadminpanel .canhcamcmslistmenu li a:focus,
+		.cmsadminpanel .canhcamcmslistmenu li a:hover {
+			background: 0 0
+		}
+
+		.cmsadminpanel .canhcamcmslistmenu .ddviewmode {
+			margin-top: 0
+		}
+
+		@media only screen and (max-width:700px) {
 			.cmsadminpanel .canhcamcmslistmenu {
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				display: flex;
-				align-items: center;
-				justify-content: center
+				flex-direction: column
 			}
-	
-			.cmsadminpanel .canhcamcmslistmenu li {
-				list-style-type: none
-			}
-			.cmsadminpanel .canhcamcmslistmenu li .form-inline .form-group:first-child {
-				display: none;
-			}
-	
-			.cmsadminpanel .canhcamcmslistmenu li a {
-				border: 0;
-				text-decoration: none
-			}
-	
-			.cmsadminpanel .canhcamcmslistmenu li a:focus,
-			.cmsadminpanel .canhcamcmslistmenu li a:hover {
-				background: 0 0
-			}
-	
-			.cmsadminpanel .canhcamcmslistmenu .ddviewmode {
-				margin-top: 0
-			}
-	
-			@media only screen and (max-width:700px) {
-				.cmsadminpanel .canhcamcmslistmenu {
-					flex-direction: column
-				}
-			}
-		</style>
+		}
+	</style>
 	<!--*********************************************************************************************-->
 	<!-- Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn                          -->
 	<!-- 156 Nguyen Van Thu, District 1, Ho Chi Minh City, Viet Nam.                                 -->
@@ -218,6 +221,9 @@
 						<div class="col-lg-3">
 							<portal:modulewrapper id="mdl154" runat="server" configuremoduleid="154" />
 							<portal:modulewrapper id="mdl155" runat="server" configuremoduleid="155" />
+							<div class="subscribe-reload">
+								<span class="mdi mdi-reload" style="display: none"></span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -267,11 +273,26 @@
 		</portal:AutoHidePanel>
 		<portal:Woopra ID="woopra11" runat="server" />
 	</form>
-	<script async defer crossorigin="anonymous"
-		src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3"></script>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3">
+	</script>
 	<script src="/Data/Sites/1/skins/default/js/searchJob.js"></script>
 	<script type="text/javascript">
-		function HideToolbar() { $(".cmsadminpanel").addClass("toggled"), $(".fa-chevron-circle-right").addClass("fa-rotate-180") } function ShowToolbar() { $(".cmsadminpanel").removeClass("toggled"), $(".fa-chevron-circle-right").removeClass("fa-rotate-180") } $(document).ready(function () { $("#pullmenucms").click(function (o) { o.preventDefault(), $(this).parents(".cmsadminpanel").hasClass("toggled") ? (ShowToolbar(), Set_Cookie("toolbarOpenState", "open")) : (HideToolbar(), Set_Cookie("toolbarOpenState", "closed")) }); var o = Get_Cookie("toolbarOpenState"); null != o && ("closed" == o && HideToolbar(), "open" == o && ShowToolbar()) });
+		function HideToolbar() {
+			$(".cmsadminpanel").addClass("toggled"), $(".fa-chevron-circle-right").addClass("fa-rotate-180")
+		}
+
+		function ShowToolbar() {
+			$(".cmsadminpanel").removeClass("toggled"), $(".fa-chevron-circle-right").removeClass("fa-rotate-180")
+		}
+		$(document).ready(function () {
+			$("#pullmenucms").click(function (o) {
+				o.preventDefault(), $(this).parents(".cmsadminpanel").hasClass("toggled") ? (ShowToolbar(),
+					Set_Cookie("toolbarOpenState", "open")) : (HideToolbar(), Set_Cookie(
+					"toolbarOpenState", "closed"))
+			});
+			var o = Get_Cookie("toolbarOpenState");
+			null != o && ("closed" == o && HideToolbar(), "open" == o && ShowToolbar())
+		});
 	</script>
 </body>
 

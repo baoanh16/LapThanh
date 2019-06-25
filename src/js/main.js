@@ -22,22 +22,23 @@ $(document).ready(function () {
 		$('.form-apply').slideToggle();
 	});
 	$('[fancybox-gallery]').fancybox({
-		loop : true,
-		thumbs : {
-			autoStart : true,
+		loop: true,
+		thumbs: {
+			autoStart: true,
 			axis: 'y',
 		},
-		afterShow: function() {
-			this.thumb = $('.fancybox-thumbs').appendTo('.fancybox-stage'),
-			this.nav = $('.fancybox-navigation').appendTo('.fancybox-content'),
-			this.count = $('.fancybox-infobar').appendTo('.fancybox-stage'),
+		afterShow: function () {
+			this.thumb = $('.fancybox-thumbs').appendTo('.fancybox-stage');
+			this.nav = $('.fancybox-navigation').appendTo('.fancybox-content');
+			this.count = $('.fancybox-infobar').appendTo('.fancybox-stage');
 			this.toolbar = $('.fancybox-toolbar').appendTo('.fancybox-stage')
 			if (!$('.fancybox-infobar h2').length) {
 				var captionHtml = "<h2>" + this.opts.caption + "</h2>"
-				$(captionHtml).prependTo('.fancybox-infobar')	
+				$(captionHtml).prependTo('.fancybox-infobar')
 			}
 		}
-})
+	})
+
 });
 
 function headerMapping() {
@@ -74,7 +75,7 @@ function headerMobileToggle() {
 
 function activeMenuHeader() {
 	$('header nav a').removeClass('active');
-	$('header nav a').on('click', function() {
+	$('header nav a').on('click', function () {
 		$(this).addClass('active');
 	})
 }
@@ -135,6 +136,7 @@ function projectDetailSliderInit() {
 		}
 	});
 }
+
 function homePartnerInit() {
 	return new Swiper('.home-partner .swiper-container', {
 		slidesPerView: 6,
@@ -157,6 +159,7 @@ function homePartnerInit() {
 		}
 	});
 }
+
 function partnerSliderInit() {
 	return new Swiper('.partner .swiper-container', {
 		slidesPerView: 6,
@@ -182,9 +185,10 @@ function partnerSliderInit() {
 		}
 	});
 }
+
 function clearBox() {
 	$('.contact .wrap-form div .RadCaptcha .rcRefreshImage').empty();
-	$('.contact .wrap-form div .RadCaptcha .rcRefreshImage').on('click', function() {
+	$('.contact .wrap-form div .RadCaptcha .rcRefreshImage').on('click', function () {
 		$(this).empty();
 	})
 }

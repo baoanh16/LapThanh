@@ -86,6 +86,10 @@ function activeMenuHeader() {
 
 function bannerHomeInit() {
 	return new Swiper('.banner-trangchu .swiper-container', {
+		autoplay: {
+			delay: 3000,
+		},
+		speed: 2000,
 		slidesPerView: 1,
 		spaceBetween: 0,
 		lazy: true,
@@ -123,6 +127,10 @@ function projectDetailSliderInit() {
 	return new Swiper('.project-detail .swiper-container', {
 		slidesPerView: 3,
 		spaceBetween: 30,
+		autoplay: {
+			delay: 3000,
+		},
+		speed: 2000,
 		navigation: {
 			nextEl: '.project-detail .btn-next',
 			prevEl: '.project-detail .btn-prev',
@@ -144,6 +152,10 @@ function projectDetailSliderInit() {
 function homePartnerInit() {
 	return new Swiper('.home-partner .swiper-container', {
 		slidesPerView: 6,
+		autoplay: {
+			delay: 3000,
+		},
+		speed: 2000,
 		slidesPerColumn: 1,
 		spaceBetween: 30,
 		navigation: {
@@ -169,6 +181,10 @@ function partnerSliderInit() {
 		slidesPerView: 6,
 		slidesPerColumn: 3,
 		spaceBetween: 30,
+		autoplay: {
+			delay: 3000,
+		},
+		speed: 2000,
 		navigation: {
 			nextEl: '.partner .btn-next',
 			prevEl: '.partner .btn-prev',

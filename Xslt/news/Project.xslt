@@ -9,25 +9,14 @@
 			<div class="row main-projects">
 				<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 				<div class="view-more">
-					<a href="http://preview6308.canhcam.com.vn/projects">
+					<a href="http://readybuiltfactoryforlease.com/projects">
 						<xsl:text disable-output-escaping="yes">view more</xsl:text>
-						<xsl:attribute name="href">
-							<xsl:value-of select="/NewsList/FullUrl"></xsl:value-of>
-						</xsl:attribute>
 					</a>
 					<xsl:value-of select="/NewsList/EditLink" disable-output-escaping="yes"></xsl:value-of>
 				</div>
 			</div>
 		</div>
 	</div>
-  </xsl:template>
-  <xsl:template match="News" mode="viewmore">
-	<a>
-		<xsl:text disable-output-escaping="yes">view more</xsl:text>
-		<xsl:attribute name="href">
-			<xsl:value-of select="FullUrl"></xsl:value-of>
-		</xsl:attribute>
-	</a>
   </xsl:template>
   <xsl:template match="News">
 	<xsl:if test="position()=1">
